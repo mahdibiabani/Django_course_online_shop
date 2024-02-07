@@ -1,5 +1,12 @@
 asgiref==3.7.2
+beautifulsoup4==4.12.3
+crispy-bootstrap4==2023.1
 Django==5.0.1
+django-bootstrap4==24.1
+django-crispy-forms==2.1
 psycopg2-binary==2.9.9
+setuptools==69.0.3
+soupsieve==2.5
 sqlparse==0.4.4
 tzdata==2023.4
+wheel==0.42.0
