@@ -8,7 +8,7 @@ class SignUpPageTests(TestCase):
     email = 'myusername@gmail.com'
 
     def test_signup_url_by_name(self):
-        response = self.client.get(reverse('signup'))
+        response = self.client.get(reverse('account_signup'))
         self.assertEqual(response.status_code, 200)
 
     def test_signup_url(self):

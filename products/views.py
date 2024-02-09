@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 from .models import Product, Comment
 from .forms import CommentForm
 
+
 class ProductListView(generic.ListView):
     queryset = Product.objects.filter(active=True)
     template_name = 'products/product_list.html'
