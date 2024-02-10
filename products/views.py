@@ -1,9 +1,20 @@
 from django.shortcuts import render
 from django.views import generic
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse
+from django.contrib import messages
+from django.utils.translation import gettext as _
 
 from .models import Product, Comment
 from .forms import CommentForm
+
+
+def test_translation(request):
+    result = _('Hello')
+    messages.success(request, 'this is a success message')
+    messages.warning(request, 'this is a warning message')
+    messages.error(request, 'this is a error message')
+    return render(request, 'products/testhello.html')
 
 
 class ProductListView(generic.ListView):

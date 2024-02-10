@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+from django.contrib.messages import constants as messages_constants
 from pathlib import Path
 from environs import Env
 import os
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third party apps
+    'rosetta',
     'crispy_forms',
     'crispy_bootstrap4',
     'allauth',
@@ -156,6 +157,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'fa'
 
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
+
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Tehran'
 
@@ -192,3 +198,9 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 # crispy form setting
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# for messages framework
+MESSAGE_TAGS = {
+    messages_constants.ERROR: 'danger',
+}
