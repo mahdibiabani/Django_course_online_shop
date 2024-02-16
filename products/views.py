@@ -9,14 +9,6 @@ from .models import Product, Comment
 from .forms import CommentForm
 
 
-def test_translation(request):
-    result = _('Hello')
-    messages.success(request, 'this is a success message')
-    messages.warning(request, 'this is a warning message')
-    messages.error(request, 'this is a error message')
-    return render(request, 'products/testhello.html')
-
-
 class ProductListView(generic.ListView):
     queryset = Product.objects.filter(active=True)
     template_name = 'products/product_list.html'
