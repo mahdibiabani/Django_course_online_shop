@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-16 19:35+0330\n"
+"PO-Revision-Date: 2024-02-16 19:38+0330\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\cart.py:32
+msgid "Product successfully added!"
+msgstr "محصول با موفقیت اضافه شد"
+
+#: .\cart.py:40
+msgid "Product successfully removed!"
+msgstr "محصول با موفقیت حذف شد"
+
+#: .\templates\cart\cart_detail.html:58
+msgid "Update"
+msgstr "به روزرسانی"
+
+#: .\templates\cart\cart_detail.html:71
+msgid "cart is empty! please add some products to the cart"
+msgstr "سبد خرید خالی است.لطفا محصول اضافه کنید"
