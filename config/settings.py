@@ -45,7 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django.contrib.humanize',
+
     # third party apps
+    'jalali_date',
     'rosetta',
     'crispy_forms',
     'crispy_bootstrap4',
@@ -57,6 +60,7 @@ INSTALLED_APPS = [
     'pages',
     'products',
     'cart',
+    'persian_translate',
 
 
 ]
