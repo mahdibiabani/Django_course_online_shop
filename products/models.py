@@ -9,7 +9,7 @@ from ckeditor.fields import RichTextField
 class Product(models.Model):
     title = models.CharField(_('Product Title'), max_length=100)
     description = RichTextField(_('Product Description'))
-    short_description = models.TextField(_('Product Short Descriptions'),blank=True)
+    short_description = models.TextField(_('Product Short Descriptions'), blank=True)
     price = models.PositiveIntegerField(_('Product Price'), default=0)
     active = models.BooleanField(default=True)
     image = models.ImageField(_('Product Image'), upload_to='product/product_cover', blank=True)
