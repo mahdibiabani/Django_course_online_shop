@@ -3,6 +3,8 @@ from django.views.decorators.http import require_POST
 from products.models import Product
 from .cart import Cart
 from .forms import AddToCartProductForm
+from django.contrib import messages
+from django.utils.translation import gettext as _
 
 
 def cart_detail_view(request):
@@ -36,3 +38,15 @@ def remove_from_cart(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product)
     return redirect('cart:cart_detail')
+
+
+def clear_cart(request):
+    cart = Cart(request)
+
+    if len(cart):
+        cart.clear()
+        messages.success(request, _('all products have been removed'))
+    else:
+        messages.warning(request, _('your cart is empty'))
+
+    return redirect('product-list')
